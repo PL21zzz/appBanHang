@@ -1,5 +1,6 @@
 package com.example.sellproduct
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -29,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.sellproduct.ui.theme.SellProductTheme
 
+@SuppressLint("ComposableNaming")
 @Composable
 fun registerScreen(navController: NavController) {
     Box(modifier = Modifier.fillMaxSize()) {

@@ -56,7 +56,7 @@ class MainActivity : ComponentActivity() {
                 }
 
                 composable("home") {
-                    homeScreen();
+                    homeScreen(navController);
                 }
             })
         }
@@ -65,7 +65,7 @@ class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class)
     @SuppressLint("ComposableNaming", "UnusedMaterial3ScaffoldPaddingParameter")
     @Composable
-    fun homeScreen() {
+    fun homeScreen(navController: NavController) {
         Scaffold(
             topBar = {
                 TopAppBar(
@@ -170,11 +170,11 @@ class MainActivity : ComponentActivity() {
 
     data class PhoneProduct(val name: String, val imageId: Int, val price: String)
 
-    @Preview(showBackground = true)
-    @Composable
-    fun GreetingPreview() {
-        SellProductTheme {
-            homeScreen();
-        }
-    }
+//    @Preview(showBackground = true)
+//    @Composable
+//    fun GreetingPreview() {
+//        SellProductTheme {
+//            homeScreen();
+//        }
+//    }
 }

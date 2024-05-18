@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SellProduct</string>
+    <string name="describe">There are many variations of passages of Lorem Ipsum available,
+        but the majority have suffered alteration in some form, by injected humour, or randomised</string>
 </resources>

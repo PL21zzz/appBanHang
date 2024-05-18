@@ -39,6 +39,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.sellproduct.ui.theme.SellProductTheme
 import com.example.sellproduct.ui.theme.grd1
 import com.example.sellproduct.ui.theme.grd2
@@ -75,17 +76,24 @@ fun loginScreen(navController: NavController) {
         OutlinedTextField(value = "", onValueChange = {}, shape = RoundedCornerShape(8.dp), label = {
             Row() {
                 Image(
+                    painter = painterResource(id = R.drawable.email_24),
+                    contentDescription = "pass",
+                    Modifier.padding(0.dp, 0.dp, 5.dp, 0.dp)
+                )
+                Text(text = "email")
+            }
+        });
+
+        spacer(height = 16.dp);
+        OutlinedTextField(value = "", onValueChange = {}, shape = RoundedCornerShape(8.dp), label = {
+            Row() {
+                Image(
                     painter = painterResource(id = R.drawable.key_24),
                     contentDescription = "pass",
                     Modifier.padding(0.dp, 0.dp, 5.dp, 0.dp)
                 )
                 Text(text = "password")
             }
-        });
-
-        spacer(height = 16.dp);
-        OutlinedTextField(value = "", onValueChange = {}, shape = RoundedCornerShape(8.dp), label = {
-            Text(text = "password")
         });
 
         spacer(height = 32.dp);
@@ -119,10 +127,11 @@ fun spacer(height: Dp) {
     Spacer(modifier = Modifier.height(height))
 }
 
-//@Preview(showBackground = true)
+//@Preview(showBackground = true, showSystemUi = true)
 //@Composable
 //fun GreetingPreview() {
 //    SellProductTheme {
-//        loginScreen();
+//        val navController = rememberNavController();
+//        loginScreen(navController);
 //    }
 //}
