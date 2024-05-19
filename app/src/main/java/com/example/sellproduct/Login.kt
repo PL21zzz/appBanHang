@@ -127,11 +127,11 @@ fun spacer(height: Dp) {
     Spacer(modifier = Modifier.height(height))
 }
 
-//@Preview(showBackground = true, showSystemUi = true)
-//@Composable
-//fun GreetingPreview() {
-//    SellProductTheme {
-//        val navController = rememberNavController();
-//        loginScreen(navController);
-//    }
-//}
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview1() {
+    SellProductTheme {
+        val navController = rememberNavController();
+        loginScreen(navController);
+    }
+}

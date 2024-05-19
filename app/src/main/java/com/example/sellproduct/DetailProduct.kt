@@ -55,7 +55,7 @@ fun Detail() {
                 Row (
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(12.dp),
+                        .padding(8.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ){
                     Icon(Icons.Default.ArrowBack, contentDescription = "back", tint = Color.White);
